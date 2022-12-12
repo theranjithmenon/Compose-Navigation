@@ -29,12 +29,12 @@ fun LogInScreen(navController: NavController? = null) {
     Column(
         Modifier
             .fillMaxWidth()
-            .fillMaxHeight()
-            .padding(25.dp),
-        verticalArrangement = Arrangement.SpaceAround,
-        horizontalAlignment = Alignment.CenterHorizontally,
+            .fillMaxHeight(),
 
-        ) {
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.SpaceEvenly
+
+    ) {
         iconAnimation()
         Text(
             text = "See what's happening in the world right now.",
@@ -56,7 +56,7 @@ fun LogInScreen(navController: NavController? = null) {
             Box(modifier = Modifier.height(10.dp))
             Button(
                 onClick = {
-                          navController?.navigate("home")
+                    navController?.navigate("home")
                 },
                 Modifier
                     .fillMaxWidth()
@@ -76,7 +76,7 @@ fun LogInScreen(navController: NavController? = null) {
 
 @Composable
 fun iconAnimation() {
-    val comositeResult : LottieCompositionResult = rememberLottieComposition(
+    val comositeResult: LottieCompositionResult = rememberLottieComposition(
         spec = LottieCompositionSpec.RawRes(R.raw.twitter)
     )
     val progressAnimation by animateLottieCompositionAsState(
