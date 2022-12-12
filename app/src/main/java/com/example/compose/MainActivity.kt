@@ -20,7 +20,7 @@ class MainActivity : ComponentActivity() {
         val splashScreen = installSplashScreen()
         super.onCreate(savedInstanceState)
         setContent {
-            LogInScreen()
+           AppNav()
         }
     }
 }

@@ -20,11 +20,12 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import com.airbnb.lottie.compose.*
 import com.example.compose.R
 
 @Composable
-fun LogInScreen() {
+fun LogInScreen(navController: NavController? = null) {
     Column(
         Modifier
             .fillMaxWidth()
@@ -36,7 +37,7 @@ fun LogInScreen() {
         ) {
         iconAnimation()
         Text(
-            text = "See what's happening in the world right now",
+            text = "See what's happening in the world right now.",
             fontSize = 40.sp,
             fontWeight = FontWeight.ExtraBold
         )
@@ -54,7 +55,9 @@ fun LogInScreen() {
             }
             Box(modifier = Modifier.height(10.dp))
             Button(
-                onClick = { /*TODO*/ },
+                onClick = {
+                          navController?.navigate("home")
+                },
                 Modifier
                     .fillMaxWidth()
                     .height(55.dp),
