@@ -25,8 +25,8 @@ fun AppNav() {
             navController = navController,
             startDestination = "login",
         ) {
-            composable("login"){ LogInScreen(navController) }
-            composable("home"){ HomeScreen(navController) }
+            composable("login") { LogInScreen(navController) }
+            composable("home") { HomeScreen(navController) }
         }
     }
 }
